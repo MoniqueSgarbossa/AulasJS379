@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        //Seletor Principal
+        $(document).ready(function () {
+            $("button").click(function () {
+                //Anima qualquer elemento
+                $("div").animate({ left: '700px' });
+            });
+        });
+    </script>
+
+    <h3>Clique no botão para animar a div</h3>
+    <div style="background-color:blueviolet;height:50px;width: 50px;position:absolute;"></div>
+
+    <br><br><br><br>
+
+    <button>Clique Aqui</button>
+</body>
+
+</html>
