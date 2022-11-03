@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias Vividos 2</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="titulo">
+            Dias Vividos
+        </div>
+        <table width="100%">
+            <tr>
+                <td>Maneira 1</td>
+                <table>
+                    <tr>
+                        <td>Data de Nascimento</td>
+                        <td>Data Atual</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dia: <input type="number" id="diaNasc" min="1" max="31"><br>
+                            Mês <input type="number" id="mesNasc" min="1" max="12"><br>
+                            Ano: <input type="number" id="anoNasc" min="1970">
+                        </td>
+                        <td>
+                            Dia: <input type="number" id="diaAtual" min="1" max="31"><br>
+                            Mês <input type="number" id="mesAtual" min="1" max="12"><br>
+                            Ano: <input type="number" id="anoAtual" min="1970">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button onclick="calcularDias1() ">Calcular</button>
+                <hr><br>
+                <p id="resultado1"></p>
+            </tr>
+            <td width="50%">Maneira 2</td><br><br>
+            Data de Nascimento: <input type="date" id="Nasc"><br>
+            Data Atual: <input type="date" id="Atual"><br><br>
+            <button>Calcular</button>
+            <hr><br>
+            <p id="resultado2"></p>
+            </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        function calcularDias1() {
+            var diaNasc = document.getElementById("diaNasc").value;
+            var mesNasc = document.getElementById("mesNasc").value;
+            var anoNasc = document.getElementById("anoNasc").value;
+            var diaAtual = document.getElementById("diaAtual").value;
+            var mesAtual = document.getElementById("mesAtual").value;
+            var anoAtual = document.getElementById("anoAtual").value;
+            var dataAtual = (new Date(anoAtual, mesAtual, diaAtual)).getTime();
+            var dataNasc = (new Date(anoNasc, mesNasc, diaNasc)).getTime();
+            var diasVividos = (dataAtual - dataNasc) / 1000 / 60 / 60 / 24;
+            document.getElementById("resultado1").innerHTML = diasVividos;
+        }
+    </script>
+</body>
+
+</html>

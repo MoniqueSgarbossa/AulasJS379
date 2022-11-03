@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner HTML</title>
+</head>
+
+<body>
+    <script>
+        function mostrar() {
+            document.getElementById("texto").innerHTML = "Este texto irá aparecer aqui";
+        }
+    </script>
+
+    <input type="button" value="CLIQUE AQUI E VEJA!" onclick="mostrar()">
+    <br>
+    <p id="texto">Testando innerHTML</p>
+</body>
+
+</html>

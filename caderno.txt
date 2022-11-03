@@ -1,0 +1,273 @@
+Caderno 
+
+Cálculos ->
+Em JavaScript podemos fazer cálculos, tanto dos mais simples (1+1), aos mais complicados(1*1+9-5*8/2);
+Para fazermos um cálculo, devemos criar uma variável para armazenar um número e logo após podemos calcular o mesmo.
+Ex:
+var n1=1;
+var n2=2;
+var total=n1+n2;
+
+Conversões ->
+Podemos trabalhar com cálculos literais com JavaScript. Ex:
+var calculo="3+3";
+document.write(eval(calculo));
+Eval: transforma o cálculo em forma literal
+
+Conversão de Literal para Inteiro ->
+Outra forma de calcular um número literal é usando a conversão de literal para inteiro usando o comando parseInt().
+Ex:
+var n="1";
+var n1="3";
+var total=(parseInt(n)+parseInt(n1));
+document.write(total);
+
+Conversão de Literal para Real ->
+Podemos converter para real uma informação literal também. Para converter para real usamos o comando parseFloat()
+Ex:
+var n1="5.5";
+var n2="8.9";
+var total(parseFloat(n1)+parseFloat(n2));
+document.write(total);
+
+Casas Decimais ->
+Podemos determinar números máximos de casas decimais em um valor, utilizando o comando toFixed;
+var numero=3.1111555678;
+document.write(numero.toFixed(2));
+
+Substituir Valor
+Podemos substituir valores no JavaScript, utilizando o comando replace.
+Ex:
+var frase="Feliz Páscoa";
+frase=frase.replace("Páscoa","Inverno");
+document.write(frase)
+
+Separar Valor ->
+Podemos pegar uma informação e separar a mesma. Para isso usamos o comando .split();
+var diaatual="18/08/2022";
+diaatual=diaatual.split("/");
+var dia=diaatual[0];
+var mes=diaatual[1];
+var ano=diaatual[2];
+
+document.write(dia," ",mes," ",ano);
+No exemplo acima, separamos a data, sendo que ela foi separada onde tem a barra. Quando a informações é separada, a variável viria um vetor (armazena várias informações).
+
+Juntar Informações -> 
+Logo após ter separado as informações, podemos junta-las utilizando o comando .join();
+Ex:
+var dataatual=diaatual.join("-");
+document.write(dataatual);
+No exemplo acima, juntamos o vetor em uma variável, sendo que ao juntar as informações, foi colocado um traço entre elas. 29-07-1998;
+
+Gerar Números Aleatórios ->
+Podemos gerar números aleatórios no JavaScript.
+Ex:
+var n=Math.random()
+-> Nesse exemplo ele gera um número aleatório de 0 à 1, contendo casas decimais.
+
+var n=(Math.round(Math.random()));
+-> Gera número aleatório, porém o número é arredondado, ou seja, somente aparece 1 ou 0;
+
+var n=(Math.round(Math.random()*10));
+-> Gera número aleatório inteiro, sendo que o número máximo definimos para 10, ou seja gera número de 0 a 10.
+
+var n=Math.random()*10;
+document.write(n.toFixed(2));
+-> No exemplo acima, criamos um número aleatório, com casas decimais, até o número 10, porém, na hora de mostrarmos, definimos que aparecerá somente duas casas decimais.
+
+Operadores Relacionais
+Os operadores relacionais são utilizados para fazer a relação entre duas informações.
+> - Maior
+< - Menor
+>= - Maior Igual
+<= - Menor Igual
+== - Igual
+=== - Extremamente igual ou idêntico
+!== - Diferente
+!=== - Exatamente Diferente
+
+Operadores Lógicos
+El algoritmo foi estudado sobre os operadores lógicos. São utilizados para fazer mais de uma verificação junto. Utilizava-se E e o OU. No JavaScript utiliza-se o && para representar o E eo || (barra reta) para representar o OU.
+
+Função SE Simples
+A função se simples é utilizada quando temos somente e duas respostas, ou seja, uma será verdadeira e outra será falsa.
+Sintaxe:
+if(<condição>){
+comandos
+}else{
+comandos
+}
+
+Em algoritmos utilizamos a função se composta, ou seja, tem três ou mais respostas, sendo uma verdadeira e as outras falsas.
+
+Função SE Composta
+Utiliza-se quando se tem mais de 2 alternativas possíveis.
+Sintaxe:
+if(<condição>){
+comandos
+}else if(<condição>){
+comandos
+}else{
+comandos
+}
+
+Estrutura de Repetição
+WHILE: Cria-se um loop de comandos quando uma condição especifica for verdadeira. Em outras palavras, enquanto a condição for verdadeira o código será executado.
+
+Sintaxe:
+while(condição){
+comandos
+}
+      ─
+        
+Ex:
+while(numero>10){					-> Enquanto o número for menor que 10
+document.write(numero)				-> Escreve o número no documento
+numero++							-> Variável número cresce
+}									-> Termina o enquanto
+
+
+For (para)
+Semelhante ao while, porém com a diferença de que na própria condição da função são especificadas todas as informações necessárias, o número inicial, o número limite de repetições e a forma de como a função iŕa "crescer" / contar.
+A estrutura de repetição PARA facilita muito quando necessita-se repetir um número finito de vezes determinada tarefa.
+
+Sintaxe:
+for (N_inicial; N_limite; Condicao_de_Aumento){
+comando
+}
+
+ex:
+<script>
+var n;
+for (n=1;n<=10; n++){
+document.write(n+"<br>");
+}
+</script>
+A função começa no número 1, seu objetivo é ir até o 10 crescendo 1 em 1, especificando na função.
+
+Funções
+A execução do JavaScript, quando interpretado pelo navegador, é imediata. O JavaScript é executado assim que uma tag <script> é encontrada em nosso documento. 
+No entanto, muitas vezes desejamos definir um comportamento para ser executado em outro momento, inclusive para que possa ser reaproveitado depois, para isso, existem as funções.
+É possível reutilizar o código, ou seja, define o código apenas uma vez e utiliza quandos forem necessário.
+Sintaxe:
+function nomeDaFuncao(){
+comandos
+}
+
+Função com Parâmetros
+A única diferença entre uma função com parâmetros e o tipo anterir de função é que este recebe uma ou mais informações para utilizar em sua tarefa pré-variávies.
+Sintaxe:
+function nomeDaFuncao(parametro1,parametro2,...){
+comandos para executar
+}
+Para invocá-la basta chamar pelo nome e informar os parametros:
+nomeDaFuncao(1,2,..)
+Para chamar devemos utilizar da seguinte maneira: soma(10,10)
+
+Função com Retorno
+Uma função com retorno na verdade é uma extensão das duas anteriores, pois a função continua realizando alguma tarefa especifica, porém com o retorno de uma informação. O que significa que ao realizar uma tarefa o programa "devolve" ao usuário uma informação processada.
+Sintaxe:
+function nomeDaFuncao(parametro1, parametro2){
+comandos a serem executados
+return "valor do retorno"
+}
+A função com retorno basicamente acrescenta o "return" no final da função. Podemos usar a função com retorno quando desejamos utilizar o valor em outro calculo.
+Exemplo:
+function soma(num1+num2){
+return num1+num2;
+}
+Para chamar devemos juntamente colocar comando de aparecer informações. Ex: alert(soma(num1,num2));
+
+Exemplo com Cálculo:
+function calculo1(n1,n2){
+return n1*n2;
+}
+function calculo2(n1,n2){
+var numero1=(calculo(n1,n2))
+var total=numero+n1;
+alert(total)
+}
+calculo(10,10);
+
+Eventos
+Os eventos são responsáveis em chamar uma função, dependendo do evento.
+
+-> onmousemove:
+	Ao movimentar o mouse em uma determinada área de um objetos, ele chama uma determinada função.
+
+-> onsubmit:
+	Disparado antes de submeter o formulário. Útil para realizar validações.
+	
+->onclick:
+	Chama uma função quando der um click sobre o objeto.
+	
+-> ondblclick:
+	Chama uma função quando for dado dois clicks rápidos sobre o objeto
+
+-> onchange:
+	Evento utilizado quando um input, select ou textarea tem seu valor alterado.
+	
+-> onblur:
+	Evento responsável em chamar uma função quando o elemento perde o foco.
+
+Animações
+Uma das maiores especialidades do JavaScript são as animações. Para que essas animações ocorram de forma correta e no tempo certo existem duas funções, o setTimeout e o setInterval, são funções parecidas com um conceito diferente, ou seja, com aplicações/focos diferentes.
+
+setTimeout
+É um método que chama uma função após determinado tempo, ou seja, é possível apresentar uma mensagem para o usuário, por exemplo, depois de 5 segundos de acesso na página. Exemplo:
+<body onload="mensagem()">
+<script>
+	function mensagem(){
+		setTimeout(function(){ alert("Bem Vindo"); },5000);
+	}
+</script>
+
+setInterval
+É uma variação do setTimeout, porém sua finalidade é executar várias vezes(diferene do anterior, que seu objetivo era usar uma vez só) a um intervalo fixo de algum tempo, ou seja, ele fica em um loop até ser cancelado (também diferente do exemplo anterior que era infinito, só parava caso o usuário fechasse a página)
+Exemplo:
+<button onclick="mensagem()">Clique Aqui </button>
+<script>
+function mensagem(){
+	setInterval(function(){alert("Olá");},3000);
+}
+Ambas opções, o setInterval e o setTimeout são funções que trabalham com tempo, onde é possível controlar quando cara tarefa será executada. E uma das atividades que conseguimos fazer com essas funções são animações.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos (onclick)</title>
+</head>
+<script>
+    function imc() {
+        var altura = document.getElementById("altura").value;
+        var peso = document.getElementById("peso").value;
+        var calc = peso / (altura * altura);
+        document.getElementById("mostrar").innerHTML = calc.toFixed(02);
+    }
+
+</script>
+<style>
+    .form {
+        width: 200px;
+        height: 350px;
+        background-color: #eee;
+        padding: 20px;
+        border: 3px solid #aaaaaa;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .grup-input {
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        height: 50px;
+        outline: none;
+        background-color: chartreuse;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 3rem;
+    }
+</style>
+
+<body>
+    <div class="form">
+        <div class="grup-input">
+            <label for="altura" class="label">Altura</label>
+            <input type="text" name="altura" id="altura">
+        </div>
+        <div class="grup-input">
+            <label for="peso" class="label">Peso</label>
+            <input type="text" name="peso" id="peso">
+        </div>
+        <button onclick="imc()">Calcular</button>
+        <p id="mostrar"></p>
+    </div>
+
+
+</body>
+
+</html>

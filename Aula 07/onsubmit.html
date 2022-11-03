@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enventos (onsubmit)</title>
+</head>
+<script>
+    function gravar() {
+        alert(document.getElementById("nome").value + " Gravado com sucesso!")
+    }
+</script>
+
+<body>
+    <form action="" onsubmit="gravar()">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

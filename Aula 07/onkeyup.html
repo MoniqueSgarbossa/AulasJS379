@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnkeyUP OnkeyDOWN OnkeyPRESS</title>
+</head>
+
+<body>
+    <script>
+        function colorir() {
+            document.getElementById("demo").style.backgroundColor = "lightblue";
+        }
+        function removeCor() {
+            document.getElementById("demo").style.backgroundColor = "White";
+        }
+
+        function contagem(x) {
+            document.getElementById("texto").innerHTML = x.length + 1 + " Teclas Precionadas";
+        }
+    </script>
+
+    <input type="text" id="demo" onkeydown="colorir()" onkeyup="removeCor()" onkeypress="contagem(this.value)">
+    <br>
+    <p id="texto"></p>
+</body>
+
+</html>

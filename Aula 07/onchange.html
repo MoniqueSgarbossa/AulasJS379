@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function verificaSenha() {
+        var senha = document.getElementById("senha").value;
+        var csenha = document.getElementById("csenha").value
+
+        if (senha == csenha) {
+            document.getElementById("texto").innerHTML = "As senhas são iguais."
+        } else {
+            document.getElementById("texto").innerHTML = "As senhas não coincidem."
+        }
+    }
+</script>
+
+<body>
+    <p>Exemplo 01</p>
+
+    Senha<input type="password" name="senha" id="senha" onchange="verificaSenha()">
+    Confirmar Senha <input type="password" name="csena" id="csenha" onchange="verificaSenha()">
+
+    <p id="texto"></p>
+
+    <p>Exemplo 02</p>
+
+    <select id="estados" onchange="mostrarEstado()">
+        <option value="Santa Catarina">SC</option>
+        <option value="São Paulo">SP</option>
+        <option value="Rio de Janeiro">RJ</option>
+        <option value="Parana">PR</option>
+        <option value="Minas Gerais">MG</option>
+    </select>
+
+    <p id="estado"></p>
+    <script>
+        function mostrarEstado() {
+            var estados = document.getElementById("estados").value;
+
+            document.getElementById("estado").innerHTML = "Você selecionou " + estados;
+        }
+    </script>
+</body>
+
+</html>

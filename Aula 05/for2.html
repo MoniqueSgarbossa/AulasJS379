@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For 2</title>
+</head>
+
+<body>
+    <script>
+        var funcionario;
+        var salario = 0;
+        var aumento = 0;
+        var cont;
+        var total = 0;
+
+        var qtd = prompt("Quantos funcionários a empresa tem?");
+        for (cont = 1; cont <= qtd; cont++) {
+            funcionario = prompt("Qual o nome do funcionário?");
+            salario = parseFloat(prompt("Qual o salário do funcionário?"));
+            aumento = parseFloat(prompt("Qual o valor do aumento?"));
+            total = salario + aumento;
+
+            alert("O novo salário do funcionário é no valor de " + total);
+        }
+    </script>
+</body>
+
+</html>

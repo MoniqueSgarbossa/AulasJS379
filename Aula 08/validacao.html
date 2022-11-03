@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Ubuntu;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main {
+        margin-top: 150px;
+        border: 1px solid black;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    body {
+        background-color: rgb(45, 45, 168);
+    }
+
+    .titulo {
+        font-size: 18pt;
+        text-align: center;
+        color: rgb(45, 45, 168);
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .campo {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    input {
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+
+    input:hover {
+        border: 1px solid rgb(45, 45, 168);
+    }
+
+    label {
+        font-size: 13pt;
+    }
+
+    .button {
+        background-color: white;
+        color: rgb(45, 45, 168);
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 7px;
+        font-size: 14pt;
+        border: 1px solid rgb(45, 45, 168);
+    }
+
+    .button:hover {
+        background-color: rgb(45, 45, 168);
+        color: white;
+    }
+
+    .botao {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <script>
+        function validar(frm) {
+            var nome = document.getElementById("nome").value;
+            var fone = document.getElementById("fone").value;
+            var email = document.getElementById("email").value;
+            var erro;
+            var n = 0;
+
+            if (nome == "") {
+                erro = "Preencha o nome. <br>";
+                n++;
+            } else {
+                erro = "";
+            }
+
+            if (fone == "") {
+                erro += "Preencha o telefone. <br>";
+                n++;
+            }
+
+            if (email == "") {
+                erro += "Preencha o email. <br>";
+                n++;
+            }
+
+            if (n > 0) {
+                document.getElementById("erros").innerHTML = "<b>" + n + " Erro(s) encontrados: <br></b>" + erro;
+                return false;
+            }
+
+            frm.submit();
+
+            alert("Nome: " + nome + "\n" + "Telefone: " + fone + "\n" + "Email: " + email + "\n" + "Informações gravadas com sucesso!")
+        }
+    </script>
+    <div class="container">
+        <div class="main">
+            <div class="titulo">
+                Validação
+            </div>
+            <form action="validacao.html" name="forma" onsubmit="validar(this); return false">
+                <div class="campo">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="campo">
+                    <label for="fone">Telefone:</label><br>
+                    <input type="text" name="fone" id="fone">
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label><br>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Gravar" class="button">
+                </div>
+            </form>
+            <hr>
+            <p id="erros"></p>
+        </div>
+    </div>
+</body>
+
+</html>

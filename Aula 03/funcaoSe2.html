@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função SE 2</title>
+</head>
+
+<body>
+    <script>
+        var funcionario = prompt("Qual é o nome do funcionário?");
+        var salario = parseFloat(prompt("Qual é o salário do funcionário?"));
+        var novoSalario;
+        if (salario >= 1000) {
+            novoSalario = salario + (salario * 0.1);
+        } else {
+            novoSalario = salario + (salario * 0.2);
+        }
+        document.write("O funcionário " + funcionario + " tem o seu novo salário no valor de  " + novoSalario);
+    </script>
+</body>
+
+</html>

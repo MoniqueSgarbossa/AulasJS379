@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função SE Média</title>
+</head>
+
+<body>
+    <script>
+        var nomeAluno = prompt("Digite o nome do aluno:");
+        var nota1 = parseFloat(prompt("Digite a primeira nota do aluno:"));
+        var nota2 = parseFloat(prompt("Digite a segunda nota do aluno:"));
+        var media = (nota1 + nota2) / 2;
+        if (media >= 7) {
+            document.write("O aluno " + nomeAluno + " foi Aprovado com a média " + media);
+        } else {
+            document.write("O aluno " + nomeAluno + " foi Reprovado com a média " + media);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupar Dados</title>
+</head>
+
+<body>
+    <script>
+        var nascimento = "20/08/2007";
+        var separacao = nascimento.split("/");
+        var dia = separacao[0];
+        var mes = separacao[1];
+        var ano = separacao[2];
+
+        var idade = 2022 - ano;
+        document.write("Você tem " + idade + " anos <br>");
+
+        var juntar = separacao.join(".") + " posições juntas novamente";
+        document.write(juntar);
+
+    </script>
+</body>
+
+</html>

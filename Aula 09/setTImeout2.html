@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out 2</title>
+</head>
+
+<body onload="atualizarTempo()">
+    <div id="hora">
+
+    </div>
+    <script>
+        function atualizarTempo() {
+            var dataAtual = new Date;
+            var horas = dataAtual.getHours();
+            var minutos = dataAtual.getMinutes();
+            var segundos = dataAtual.getSeconds();
+
+            document.getElementById("hora").innerHTML = horas + ":" + minutos + ":" + segundos;
+
+            t = setTimeout("atualizarTempo()", 1000);
+        }
+    </script>
+</body>
+
+</html>
