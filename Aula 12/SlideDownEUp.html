@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down e Up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#mais").click(function () {
+                $("#painel").slideDown(); //Escorrega para baixo
+            })
+            $("#menos").click(function () {
+                $("#painel").slideUp(); //Escorrega para cima
+            })
+        })
+    </script>
+</head>
+<style>
+    #painel,
+    #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(163, 231, 216);
+        border: 1px solid black;
+    }
+
+    #painel {
+        padding: 50px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="flip">Prepare-se</div>
+
+    <div id="painel">Olá</div>
+
+    <br>
+
+    <div align="center">
+        <button id="mais">+</button>
+        <button id="menos">-</button>
+    </div>
+</body>
+
+</html>

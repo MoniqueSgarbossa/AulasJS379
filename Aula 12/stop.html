@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#painel").slideDown(6000);
+            });
+            $("#parar").click(function () {
+                $("#painel").stop(); // Para a Animação
+            })
+        })
+    </script>
+</head>
+<style>
+    #painel,
+    #flip {
+        padding: 5px;
+        font-size: 18px;
+        text-align: center;
+        background-color: rgb(19, 87, 87);
+        color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    #painel {
+        padding: 100%;
+        display: none;
+    }
+</style>
+
+<body>
+    <button id="parar">Pare a Animação</button>
+
+    <div id="flip">Clique para começar a descer</div>
+    <div id="painel">Boa tarde, Turma 379!</div>
+</body>
+
+</html>

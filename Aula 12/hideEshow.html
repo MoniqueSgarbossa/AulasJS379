@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#esconder").click(function () {
+                $("p").hide(3000); //Efeito para esconder/ocultar
+            });
+            $("#aparecer").click(function () {
+                $("p").show(3000); //Efeito para aparecer/mostrar
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Clique nos Botões</p>
+    <button id="esconder">Esconder</button>
+    <button id="aparecer">Aparecer</button>
+</body>
+
+</html>
