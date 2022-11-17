@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append e Remove</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $("#botao1").click(function () {
+            $("ul").append("<li> Novo Item </li>");
+            // adiciona elementos
+        });
+        $("#botao2").click(function () {
+            $("li").remove();
+            // remove os elementos
+        })
+    })
+</script>
+
+<body>
+    <ul>
+        <li>Item</li>
+    </ul>
+
+    <button id="botao1">Adicionar Item</button>
+    <button id="botao2">Remover</button>
+</body>
+
+</html>

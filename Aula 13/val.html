@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Val Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var nome = $("#aluno").val();
+            var nota1 = parseFloat($("#nota1").val());
+            var nota2 = parseFloat($("#nota2").val());
+            var media = (nota1 + nota2) / 2;
+
+            if (media >= 7) {
+                $("#result").text("O aluno " + nome + " foi aprovado com a média " + media);
+            } else {
+                $("#result").text("O aluno " + nome + " foi reprovado com a média " + media);
+            }
+        })
+    })
+</script>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="titulo">
+                <h2>Média dos Alunos</h2>
+            </div>
+            <div class="form">
+                <div class="input-group">
+                    <label for="aluno">Aluno(a)</label>
+                    <input type="text" id="aluno">
+                </div>
+                <div class="input-group">
+                    <label for="nota1">Nota 1:</label>
+                    <input type="text" id="nota1">
+                </div>
+                <div class="input-group">
+                    <label for="nota2">Nota 2:</label>
+                    <input type="text" id="nota2">
+                </div>
+                <div class="botao">
+                    <button>Calcular Média</button>
+                </div>
+                <div class="result">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

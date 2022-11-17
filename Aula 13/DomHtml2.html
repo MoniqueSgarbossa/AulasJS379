@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação DOM 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $("#botao1").click(function () {
+            $("#txt").text("Endereço:");
+            // Define o conteúdo de texto
+        });
+        $("#botao2").click(function () {
+            $("#txt").html("<a href='https://www.google.com/' style='color:red'>Endereço:</a>")
+            // Define um conteúdo (incluindo tags HTML)
+        });
+        $("#botao3").click(function () {
+            $("#nome").val("Rua Getúlio Vargas");
+            // Define o valor do input
+        });
+    });
+</script>
+
+<body>
+    <p id="txt"><b>Nome:</b></p>
+    <input type="text" id="nome"><br><br><br>
+    <button id="botao1">Define o Texto</button>
+    <button id="botao2">Define um texto com HTML</button>
+    <button id="botao3">Define o Valor</button>
+</body>
+
+</html>
