@@ -233,6 +233,39 @@ function mensagem(){
 }
 Ambas opções, o setInterval e o setTimeout são funções que trabalham com tempo, onde é possível controlar quando cara tarefa será executada. E uma das atividades que conseguimos fazer com essas funções são animações.
 
+Jquery
+É uma biblioteca do JavaScript que reduz em muito o trabalho de codificação e permite-nos fazer coisas complicada como animações, event handlings, usar o AJAX, etc, de uma forma fácil. Para poder usar o jQuery voce sempre precisa inseri-lo no seu HTML, por meio de um link.
+A sintaxe do jQuery é feita sob medida para selecionar elementos HTML e executar alguma ação no elemento.
+ - Um sinal de $ para definir / acessar o jQuery
+ - Um (seletor) para "consultar (ou localizar)" elementos HTML
+ - Uma ação() a ser executada no elemento
+ 
+Document Ready
+Todos os métodos do jQuery em nossos exemplos estarão dentro de um evento chamado:
+$(document).ready(function(){
+})
+Isso evita que qualquer código jQuery seja executado antes que o documento seja totalmente carregado (está pronto).
+
+Efeitos
+Hide -> fazer ocultar um objeto
+Show -> fazer aparecer um objeto oculto
+SlideDown -> permite que um objeto escorregue para baixo
+SlideUp -> permite que um objeto escorregue para cima
+
+Manipulação de DOM em jQuery
+O jQuery vem com vários métodos relacionados ao DOM que facilitam o acesso e a manipulação de elementos e atributos.
+Pegar conteúdo da página:
+text() - Retorna o conteúdo de texto dos elementos selecionados;
+html() - Define o conteúdo dos elementos selecionados (incluindo tags HTML)
+val() - Define o valor dos campos de um formulário
+Definindo conteúdo na página:
+text() - Define o conteúdo de texto dos elementos selecionados
+html() - Define o conteúdo dos elementos selecionados (incluindo tags HTML)
+val() - Define o valor dos campos de um formulário
+
+append - podemos inserir elementos
+remove - podemos remover elementos
+css - usamos para quando quisermos aplicar como parâmetro formatações em css no elemento.
 
 
 
