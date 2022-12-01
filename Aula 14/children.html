@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+
+    // Descendants = Descendentes
+
+    $(document).ready(function () {
+        // retorna todos os filhos do elemento do selecionado
+        $("p").children().css({
+            "color": "red",
+            "border": "2px solid red"
+        })
+    })
+</script>
+<style>
+    .descendants * {
+        display: block;
+        border: 2px solid lightgray;
+        color: lightgray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <div class="descendants">
+        <p>
+            p
+            <span>span</span>
+        </p>
+        <p>
+            p
+            <span>span</span>
+        </p>
+    </div>
+</body>
+
+</html>

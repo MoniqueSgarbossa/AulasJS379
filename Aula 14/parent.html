@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+
+    // Ancestors = Antecessores
+
+    $(document).ready(function () {
+        $("span").parent().css({
+            // retorna o elemento pai do elemento selecionado
+            "color": "red",
+            "border": "2px solid red"
+        })
+    })
+</script>
+<style>
+    .ancestors * {
+        display: block;
+        border: 2px solid lightgray;
+        color: lightgray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <div class="ancestors">
+        <li>
+            li (parent/pai)
+            <span>span</span>
+        </li>
+        <p>
+            p (parent/pai)
+            <span>span</span>
+        </p>
+    </div>
+</body>
+
+</html>

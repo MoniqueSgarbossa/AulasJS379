@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $("div").first().css({
+            // retorna o primero elemento da tag  selecionada
+            "background-color": "red",
+        })
+    })
+</script>
+<style>
+    div {
+        border: 2px solid black;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <h1>Boa tarde!</h1>
+    <p>Como vocês estão?</p>
+    <div>
+        <p>Turma 379</p>
+        <p>Já bebeu água hoje?</p>
+    </div>
+    <div>
+        <p>Hoje vai chover</p>
+        <p>Palmeiras não tem mundial!</p>
+    </div>
+</body>
+
+</html>

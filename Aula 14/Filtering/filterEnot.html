@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter E Not</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $("p").filter(".filtro").css({
+            // ele seleciona os elementos por meio do parametro
+            "background-color": "lightgray"
+        })
+        $("p").not(".nao").css({
+            // ele seleciona os elmementos que não tem o parametro 
+            "background-color": "lightblue"
+        })
+    })
+</script>
+<style>
+    body {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <h1>Olá Monique</h1>
+    <h3 class="filtro">Seja bem vinda</h3>
+    <p class="nao">Faça suas compras</p>
+    <p class="filtro">Com a melhor praticidade</p>
+    <p>Testando</p>
+    <p>Testando</p>
+    <span>Alguma dúvida?</span>
+</body>
+
+</html>
