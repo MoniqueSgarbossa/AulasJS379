@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#buscar").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tabelaPrincipal tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                })
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Ubuntu";
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            margin-top: 120px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: white;
+        }
+
+        input {
+            border: 2px solid aquamarine;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 13pt;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: aquamarine;
+            padding: 10px;
+            color: black;
+            font-size: 14pt;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgb(218, 243, 234);
+        }
+    </style>
+
+
+
+    <div class="container">
+        <div class="main">
+            <input type="text" id="buscar" placeholder="Buscar...">
+            <br><br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaPrincipal">
+                    <tr>
+                        <td>Igor</td>
+                        <td>Gugel</td>
+                        <td>igorEduardoG@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Tiago</td>
+                        <td>Giachini</td>
+                        <td>tiaguinhoG@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>Dala Costa</td>
+                        <td>brunoDala@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Giovanni</td>
+                        <td>Perondi</td>
+                        <td>gioPerondi@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
