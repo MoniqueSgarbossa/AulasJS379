@@ -268,9 +268,40 @@ remove - podemos remover elementos
 css - usamos para quando quisermos aplicar como parâmetro formatações em css no elemento.
 
 
+jQuery Traversing
+Significa "percorrer", é usado para "localizar" (ou selecionar) elementos HTML com base em sua relação com outros elementos. Começe com uma seleção e percorra essa seleção até alçancar os elementos desejados.
+Temos métodos para percorrer os elementos DOM (Ancestors, Descendants e Siblings).
 
+Ancestors / Parent()
+Retorna o elemento pai direto do elemento selecionado. Esse método só percorre um único nível até a árvore DOM.
 
+Descendants / children()
+Retorna todos os filhos diretos do elemento selecionado. Esse método também percorre apenas um único nível na árvore DOM.
 
+Sibling / siblings()
+Retorna todos os elementos irmãos do elemento selecionado.
+
+Filtering()
+Temos também o filtering, de certa forma, uma espécie de filtros para acessar os elementos da página.
+first() - Retorna o primeiro elemento da tag selecionada (Exemplo: se temos 3 divs na página, ele irá selecionar a primeira)
+last() - Retorna o último elemento da tag selecionada.
+eq(nº do elemento desejado) - Retorna o elemento, cujo número (em ordem) foi passado como parâmetro. (Exemplo: se tivermos 3 divs e como parâmetro da função passar o número 1, ele retorna a segunda DIV da página, visto que a contagem começa com 0)
+filter("tag") - passamos uma tag como parâmetro, e ele selecionará todos os elementos daquela tag
+not("tag") - funciona semelhante ao filter(), porém retorna ao contrário, ao invés de selecionar os que tem aquela tag, ele seleciona os que NÃO tem aquela tag.
+
+noConflict()
+Se duas estruturas diferentes estiverem usando o mesmo atalho, uma delas poderá para de funcionar.Você pode, ainda usar o jQuery, simplesmente escrevendo o nome completo em vez do atalho:
+$.noConflict()
+jQuery(document).ready(function(){})
+
+Você também pode criar seu próprio atalho com muita facilidade. O método retorna uma referência ao jQuery, que você pode salvar em uma variável, para uso posterior.
+var jq=$.noConflict();
+jq(document).ready(function(){})
+
+Se você tem um bloco de código jQuery que usa o atalho $ e não quer mudar tudo, você pode passar o sinal $ como parâmetro para o método pronto. Isso permite que você acesse o jQuery usando $, dentro dessa função - fora dela, você terá que usar o "jQuery"
+
+Filtros
+Basicamente usaremos jQuery para filtrar elementos específicos, principalmente usando tabelas
 
 
 

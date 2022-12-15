@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Diretivas
+        ng-app = informa qual o elemento "proprietário"
+        ng-init = define valores iniciais
+        ng-repeat = repetir os dados
+     -->
+
+    <div ng-app="" ng-init="nomes=['Tiago','Igor','Bruno','Giovanni','Monique']">
+        <ul ng-repeat="lista in nomes">
+            <li>{{ lista }}</li>
+        </ul>
+    </div>
+</body>
+
+</html>
