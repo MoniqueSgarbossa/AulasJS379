@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Ubuntu;
+    }
+
+    table {
+        border-collapse: collapse;
+
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cab {
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #049410;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e4e4;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main {
+        margin-top: 140px;
+    }
+</style>
+
+<body ng-app="myApp" ng-controller="controlador">
+    <div class="container">
+        <div class="main">
+
+
+            <table border="1" width="50%">
+                <tr class="cab">
+                    <td>Nome</td>
+                    <td>Idade</td>
+                </tr>
+                <tr ng-repeat="x in nomes | orderBy:'nome'">
+                    <td>{{x.nome}}</td>
+                    <td>{{x.idade}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        angular.module('myApp', []).controller('controlador', function ($scope) {
+            $scope.nomes = [
+                { nome: 'Tiago', idade: 16 },
+                { nome: 'Giovanni', idade: 18 },
+                { nome: 'Bruno', idade: 16 },
+                { nome: 'Monique', idade: 15 }
+            ];
+        });
+    </script>
+</body>
+
+</html>

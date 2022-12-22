@@ -303,11 +303,50 @@ Se você tem um bloco de código jQuery que usa o atalho $ e não quer mudar tud
 Filtros
 Basicamente usaremos jQuery para filtrar elementos específicos, principalmente usando tabelas
 
+ANGULAR
+é um  framework de JavaScript, o angular utiliza atributos HTML com Diretivas e Expressões.
 
+Diretivas
+Usamos as diretivas para trabalhar com os dados no Angular
+ng-app -> informa qual o elemento é o "proprietário" de um aplicativo
+ng-model -> associa o valor do campo de entrada ao nome da variável do aplicativo. Ela também pode:
+- Fornecer validação de tipos para dados do aplicativo (número, email, etc)
+- Vincule elementos HTML a formulários HTML
+- Entre outros
+ng-init -> define valores iniciais para um aplicativo Angular
+ng-repeat -> funciona basicamente como um laço de repetição mais simples (while/for)
 
+Expressões
+Podem ser escritas dentro de chaves duplas: {{expressão}}, ou também pode ser escrita dentro de uma diretiva. O angular resolverá a expressão e retornará o resultado exatamente onde a expressão foi escrita.
+Exemplo:
+{{5+5}} ou {{nome+ " "+sobrenome}}
 
+Módulos
+São como funções, podemos definir ações que irão acontercer no página usando estes módulos, não são tão utilizados pelo fato de ser um pouco complexo, mas em alguns casos é muito util.
+ng-controller -> é a diretiva que vai controlar o módulo.
 
+ng-bind -> A ligação de dados ou data binding como também é conhecida tem uma função parecida, porém com variáveis apenas, não operações, mas basta usar a diretiva ng-bind que funcionará da mesma maneira.
+<body ng-app="" ng-init="nome='Monique'">
+<p ng-bind="nome">
+A diretiva ng-bind pode ser bastante útil em alguns casos, um exemplo disso é trafegar valores que estão sendo digitados em um campo de texto.
 
+Escopo
+Ele é a parte de ligação entre o HTML(view) e o JavaScript(controller), é um objeto com as propriedades e métodos disponíveis. O escopo está disponível para a exibição e o controlador, é em resumo, uma forma de criar e acessar "variáveis";
+Ao adicionar propriedades ao objeto $scope no controlador, o HTML obtém acesso a essas propriedades. Na hora de apresentar no HTML você não usa o prefixo $scope, você apenas se refere ao nome criado, como {{exemplo}}
+
+Filtros/Funções
+uppercase - Formata uma string para maiúscula
+lowercase - Formata uma string para minúsculas
+limitTo - Limita uma string a um número especificado de caracteres
+currency - Formata um número para um formato de moeda
+date - Formata um número inteiro para um formato especifico de data
+orderBy - Ordena um array por uma expressão
+Filtros são funções específicas que podem auxiliar na montagem de páginas, muitas vezes efeitos simples, mas que fazem uma diferença enorme no resultado final.
+Da mesma forma os serviços,também são funções prontas, porém com algumas usabilidades um pouco diferentes.
+$timeout(function(){
+	$scope.mensagem="Como está?";
+},5000)
+Neste caso, o que acontece é que quando a página ficar 5 segundos/ 5000 milisegundos aberta ele colocará a mensagem, usando o serviço timeout (semelhante ao que foi visto em jQuery);
 
 
 

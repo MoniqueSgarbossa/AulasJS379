@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body ng-app="">
+    {{"BoA TArde" | uppercase}}
+    <br><br>
+    {{"TUDO Bem?" | lowercase}}
+    <br><br>
+    {{"Meu NoME é MoNiQUE"| limitTo:10}}
+    <br><br>
+    {{69.99 | currency:"R$ "}}
+    <br><br>
+    {{154539999996565 | date:"dd/MM/yyyy"}}
+    <!-- Data em milisegundos -->
+</body>
+
+</html>

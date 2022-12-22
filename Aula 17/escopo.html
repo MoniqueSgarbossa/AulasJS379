@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo ou Scope</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h1>Média Final: {{ (nota1+nota2+nota3)/3}}</h1>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.nota1 = 9.5;
+            $scope.nota2 = 5.7;
+            $scope.nota3 = 8.3;
+        });
+    </script>
+</body>
+
+</html>
